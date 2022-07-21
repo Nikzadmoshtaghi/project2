@@ -1,0 +1,174 @@
+/* general */
+li {
+    display: inline;
+    padding: 10px;
+    border-left: 1px solid #ddd;
+}
+
+a {
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+/* main */
+
+.sub-header {
+
+    line-height: 25px;
+    height: 41px;
+}
+
+p {
+    max-width: 570px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.bg-color {
+    background-color: #a4c639;
+}
+.color{
+    color: #a4c639;
+}
+button.bg-color.text-light.p-2.rounded-pill {
+    text-transform: uppercase;
+    border: 0;
+}
+section.sec-1 {
+    padding-top: 5em;
+}
+
+section.sec-2{
+    background-image: url(../assets/images/fun-facts-bg.jpg);
+    background-attachment: fixed;
+}
+
+.count-wrapper {
+    text-align: center;
+    background-color: rgba(250,250,250,0.1);
+    padding: 25px 30px 35px 30px;
+    margin: 15px 0px;
+}
+.count-digit {
+    margin: 5px 0px;
+    color: #a4c639;
+    font-weight: 700;
+    font-size: 36px;
+}
+.count-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* slideShow */
+
+.slideshow {
+    cursor: pointer;
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slides {
+    position: relative;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.slide div p {
+    margin-bottom: 0;
+    color: #fff;
+    padding: 10px;
+    transition: font-size 0.5s;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    padding: 16px;
+    margin-top: -32px;
+}
+
+.prev:active,
+.next:active {
+    background-color: #000;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px
+}
+
+.points {
+    margin-top: 10px;
+}
+
+.points>span {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: #aaa;
+    border-radius: 50%;
+}
+
+.points>span.active {
+    background-color: #555;
+}
+
+.slide.active.bg-1 {
+    background-image: url(../assets/images/slide_01.jpg);
+    padding-top: 44em;
+}
+
+.slide.active.bg-2 {
+    background-image: url(../assets/images/slide_02.jpg);
+    padding-top: 44em;
+}
+
+.slide.active.bg-3 {
+    background-image: url(../assets/images/slide_03.jpg);
+    padding-top: 44em;
+}
+
+.content {
+    text-align: left;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
