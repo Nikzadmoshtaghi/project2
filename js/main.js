@@ -1,51 +1,60 @@
-// function
+// fanction
 function classSwitcher () {
+   
     slides.forEach(slide => slide.classList.remove("active"));
-    points.forEach(slide => slide.classList.remove("active"));
     slides[active].classList.add("active")
-    points[active].classList.add("active")
-}
-
-let goNext = () => {
-    active = (active == slides.length - 1) ? 0 : active + 1;
+     
+ }
+ 
+ let goNext = () => {
+    active = (active == slides.length -1) ? 0 : active + 1;
     classSwitcher ()
-}
-
-let goPrev = () => {
-    active = (active == 0) ? slides.length - 1: active - 1;
+ }
+ 
+ let goPrev = () => {
+    active = (active == 0) ? slides.length -1 : active - 1;
     classSwitcher ()
-}
+ }
+ 
+ // variables
+ let active = 0;
+ let timer = 4000;
+ 
+ let slideshow = document.querySelector(".slideshow") ;
+ let slides = document.querySelectorAll(".slide")
+ let prev = document.querySelector(".prev");
+ let next = document.querySelector(".next");
+ 
+ // setInterval
+ setInterval(goNext, timer);
+ 
+ 
+ // next event
+ next.addEventListener("click", e => goNext());
+ 
+ // prev event
+ prev.addEventListener("click", e => goPrev());
 
 
 
+// sticky navbar
+// scroll smoth
+let topMenu = document.querySelector(".top-menu");
+let scroll = document.querySelector(".scroll")
+window.addEventListener("scroll", e => {
+    if(scrollY > 500) {
+        topMenu.classList.add("sticky");
+        scroll.classList.add("show");
+    }else{
+        topMenu.classList.remove("sticky");
+        scroll.classList.remove("show");
+    }
+})
 
-
-// variables
-let active = 0;
-let timer = 5000;
-
-let slideshow = document.querySelector(".slideshow");
-let slides = document.querySelectorAll(".slide")
-let points = document.querySelectorAll(".points > span")
-let prev = document.querySelector(".prev");
-let next = document.querySelector(".next");
-
-// setInteval
-setInterval(goNext, timer);
-
-// point event
-// points.forEach((point, index )=> {
-//     point.addEventListener("click", e => {
-//         active = index;
-//         classSwitcher ()
-//     })
-// })
-
-// next events
-next.addEventListener("click", e => goNext())
-
-// prev even
-prev.addEventListener("click", e => goPrev());
-
+scroll.addEventListener("click", e => {
+    if(scroll.classList.contains("show")){
+        window.scrollTo({top:0, behavior:"smooth"})
+    }
+})
 
 
